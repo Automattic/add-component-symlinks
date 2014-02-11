@@ -10,7 +10,7 @@ NodeJS.
 Installation
 ------------
 
-Install the `gnode` executable via npm:
+Install the `add-component-symlinks` executable via npm:
 
 ``` bash
 $ npm install -g add-component-symlinks
