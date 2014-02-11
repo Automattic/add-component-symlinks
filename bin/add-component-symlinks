@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+var addComponentSymlinks = require('../');
+var dir = process.argv[2] || process.cwd();
+
+addComponentSymlinks(dir, function (err) {
+  if (err) throw err;
+});

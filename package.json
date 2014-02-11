@@ -1,0 +1,30 @@
+{
+  "name": "add-component-symlinks",
+  "version": "0.0.0",
+  "description": "Adds symlinks to the node_modules dir to fix component require() calls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cloudup/add-component-symlinks.git"
+  },
+  "keywords": [
+    "component",
+    "symlink",
+    "browserify",
+    "require",
+    "node",
+    "fix"
+  ],
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cloudup/add-component-symlinks/issues"
+  },
+  "homepage": "https://github.com/cloudup/add-component-symlinks",
+  "dependencies": {
+    "suspend": "~0.4.0"
+  }
+}
