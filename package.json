@@ -1,6 +1,6 @@
 {
   "name": "add-component-symlinks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds symlinks to the node_modules dir to fix component require() calls",
   "main": "index.js",
   "bin": "bin/add-component-symlinks",
