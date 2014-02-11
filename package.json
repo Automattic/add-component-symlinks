@@ -4,7 +4,7 @@
   "description": "Adds symlinks to the node_modules dir to fix component require() calls",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "regenerator index.es6.js > index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
   "homepage": "https://github.com/cloudup/add-component-symlinks",
   "dependencies": {
     "suspend": "~0.4.0"
+  },
+  "devDependencies": {
+    "regenerator": "~0.4.0"
   }
 }
