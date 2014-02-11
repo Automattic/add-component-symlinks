@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Adds symlinks to the node_modules dir to fix component require() calls",
   "main": "index.js",
+  "bin": "bin/add-component-symlinks",
   "scripts": {
     "prepublish": "regenerator --include-runtime index.es6.js > index.js"
   },
