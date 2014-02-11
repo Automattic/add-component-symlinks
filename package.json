@@ -4,7 +4,7 @@
   "description": "Adds symlinks to the node_modules dir to fix component require() calls",
   "main": "index.js",
   "scripts": {
-    "prepublish": "regenerator index.es6.js > index.js"
+    "prepublish": "regenerator --include-runtime index.es6.js > index.js"
   },
   "repository": {
     "type": "git",
