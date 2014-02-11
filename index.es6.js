@@ -81,7 +81,4 @@ var processDir = suspend.async(function* (dirname) {
 });
 
 
-// kick things off!
-addComponentSymlinks(process.cwd(), function (err) {
-  if (err) throw err;
-});
+module.exports = addComponentSymlinks;
