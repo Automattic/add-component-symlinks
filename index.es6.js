@@ -65,6 +65,10 @@ var processDir = suspend.async(function* (dirname) {
 
   var nodeModulesDir = path.dirname(dirname);
   var src = path.basename(dirname);
+  if (src == component.name) {
+    console.error('ignoring matching package and component name: %j', src);
+    return;
+  }
   var dst = path.resolve(nodeModulesDir, component.name);
 
   try {
