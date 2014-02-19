@@ -74,7 +74,10 @@ var processDir = suspend.async(function* (dirname) {
   try {
     yield fs.unlink(dst, resume());
   } catch (e) {
-    // ignore ENOENT, everything can be re-thrown
+    if ('EPERM' == e.code) {
+      console.error('skipping symlink for %s because of existing directory with name: %s', src, component.name);
+      return;
+    }
     if ('ENOENT' != e.code) throw e;
   }
 
