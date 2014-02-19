@@ -1,4 +1,10 @@
 
+1.0.2 / 2014-02-19
+==================
+
+  * index: skip symlink if dir already exists (#1, @coreh)
+  * README++
+
 1.0.1 / 2014-02-10
 ==================
 
