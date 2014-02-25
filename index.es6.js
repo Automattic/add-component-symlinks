@@ -83,7 +83,15 @@ var processDir = suspend.async(function* (dirname) {
 
   // finally, we can add a symlink for this component
   console.log('adding symlink %j -> %j', src, component.name);
-  yield fs.symlink(src, dst, resume());
+  var type;
+  if (/win/.test(process.platform)) {
+    // on Windows, we must absolutize the arguments, otherwise node
+    // will attempt to do it for us and actually get it wrong...
+    type = 'junction';
+    src = path.resolve(nodeModulesDir, src);
+    dst = path.resolve(nodeModulesDir, dst);
+  }
+  yield fs.symlink(src, dst, type, resume());
 
 });
 
